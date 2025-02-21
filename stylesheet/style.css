@@ -1,0 +1,70 @@
+/* Defina o caminho correto para a fonte baixada */
+@font-face {
+  font-family: 'MinhaFonteLegal';
+  src: url('caminho/para/sua/fonte.ttf') format('truetype');
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+.container {
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-family: 'MinhaFonteLegal', sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(128, 0, 255, 0.8), 0 0 20px rgba(128, 0, 255, 0.6);
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.botao-entrar {
+  
+  text-decoration: none;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background-color: #8000ff;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(128, 0, 255, 0.8);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.botao-entrar:hover {
+  background-color: #a64dff;
+  box-shadow: 0 0 25px rgba(128, 0, 255, 1);
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 70%, rgba(20, 9, 31, 0.6), transparent),
+              radial-gradient(circle at 80% 90%, rgba(82, 12, 151, 0.6), transparent),
+              radial-gradient(circle at 10% 10%, rgba(184, 7, 184, 0.6), transparent);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.8;
+}
