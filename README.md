@@ -11,7 +11,7 @@ Meu Portfólio de 2025!
 - Minhas linguagens e frameworks
 - Minhas experiências
 - Imagens de protótipos no Figma que desenvolvi ou nos quais contribuí
-- Imagens do app que detecta objetos em tempo real que implementei
+- Imagens do app que detecta objetos em tempo real com IA que implementei
 
 
   
