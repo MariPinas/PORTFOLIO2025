@@ -1,8 +1,8 @@
-/* Defina o caminho correto para a fonte baixada */
 @font-face {
   font-family: 'MinhaFonteLegal';
-  src: url('caminho/para/sua/fonte.ttf') format('truetype');
+  src: url('fonte/caminho.ttf') format('truetype');
 }
+
 
 body, html {
   margin: 0;
