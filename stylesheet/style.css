@@ -310,6 +310,7 @@ section {
   cursor: pointer;
   box-shadow: 0 0 5px var(--main-color);
   transition: 0.3s ease;
+  resize: none;
 }
 .project-card:hover{
   box-shadow: 0 0 15px var(--main-color),
@@ -329,7 +330,76 @@ section {
 .project-card p{
   font-size: 1.6rem;
 }
-/* Navegação */
+
+/* FIM PROJETOS SEC*/
+
+/* CONTATO SEC*/
+  .contato{
+    background-color: var(--bg-color);
+  }
+
+  .contato h2{
+    margin-bottom: 3rem;
+    color: var(--text-color);
+  }
+
+  .contato form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 5rem 0;
+    text-align: center;
+  }
+
+  .contato form .input-box input, .contato form textarea{
+    width: 100%;
+    padding: 2.5rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    margin: 1.5rem 0;
+    resize: none;
+  }
+/*FIM CONTATO SEC*/
+
+/*FOOTER*/
+.footer{
+  background-color: var(--second-bg-color);
+  padding: 50px 0;
+}
+.footer .social-icons{
+  text-align: center;
+  
+}
+.footer ul{
+  text-align: center;
+  font-size: 1.8rem;
+}
+.footer ul li{
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.footer ul li a{
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover{
+  border-bottom: 3px solid var(--main-color);
+}
+
+.footer .copyright{
+  text-align: center;
+  font-size: 16px;
+  margin-top: 40px;
+}
+
+
+/* Nav */
 nav ul {
   list-style: none;
   display: flex;
@@ -341,7 +411,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--branco); /* Cor dos links na navegação */
+  color: var(--branco);
   text-decoration: none;
   font-size: 1.2rem;
 }
@@ -351,21 +421,3 @@ nav ul li a:hover {
   transition: color 0.3s ease;
 }
 
-/* Seções de conteúdo */
-
-#contato {
-  margin-bottom: 40px;
-}
-
-/* Rodapé */
-footer {
-  padding: 20px;
-  background-color: var(--marrom-escuro); 
-  text-align: center;
-  bottom: 0;
-  width: 100%;
-}
-
-footer p{
-  color: var(--branco);
-}
