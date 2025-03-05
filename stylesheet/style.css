@@ -13,7 +13,7 @@
   --bg-color: #080808;
   --second-bg-color: #101010;
   --text-color: white;
-  --main-color: #4b095e;
+  --main-color: #8a11ac;
 }
 
 html {
@@ -85,6 +85,8 @@ span{
 .navbar a:hover {
   color: var(--main-color);
   border-bottom: 3px solid var(--main-color);
+  font-weight: 520;
+  transition: 0.4s ease-in-out;
 }
 
 .gradient-btn{
@@ -110,7 +112,7 @@ span{
 
 /*FIM HEADER*/
 
-/* SECTION */
+/* SECTION 1 */
 
 section {
   margin-top: 10vh;
@@ -181,21 +183,152 @@ section {
   transform: scale(1.2)translateY(-5px);
   box-shadow: 0 0 25px var(--main-color);
 }
-.hero-section h1 {
+/*FIM SECTION 1*/
+/* BOTÕES */
+
+.btn-group{
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn{
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  color: black;
+  border: 2px solid transparent;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+.btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color);            
+}
+
+.btn-group a:nth-of-type(2){
+  background-color: black;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 25px transparent;
+}
+
+.btn-group a:nth-of-type(2):hover{
+  box-shadow: 0 0 25px var(--main-color);
+  background-color: var(--main-color);
+  color: black;
+}
+
+/*FIM BOTÕES*/
+
+/* SECTION 2 */
+.sobre{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background: var(--second-bg-color);
+}
+
+.sobre-img img{
+  width: 32vw;
+  border-radius: 20% 0;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.5s ease-in-out;
+}
+
+.sobre-img img:hover{
+  box-shadow: 0 0 25px var(--main-color),
+  0 0 50px var(--main-color),
+  0 0 100px var(--main-color);
+}
+
+.sobre-conteudo p{
+  font-size: 2rem;
+}
+
+.sobre-conteudo h2{
+  font-size: 4rem;
+  text-align: left;
+}
+
+.sobre-conteudo .btn{
+  margin-top: 3rem;
+}
+
+/* FIM SEC 2*/
+
+/* SCROLL BAR*/
+
+::-webkit-scrollbar{
+  width: 15px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track{
+  background-color: var(--bg-color);
+}
+/* FIM SCROLLBAR */
+
+/*Projetos sec*/
+
+.heading{
+  text-align: center;
+  font-size: 7rem;
+  margin: 5rem 0;
+}
+.projetos{
+  background-color: var(--second-bg-color);
+  
+}
+
+.projects-box{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  place-items: center;
+  gap: 3rem;
+  row-gap: 5rem;
+}
+
+.project-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 3rem;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--main-color);
+  transition: 0.3s ease;
+}
+.project-card:hover{
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color);
+  transform: scale(1.02);
+}
+
+.project-card img {
+  max-width: 300px;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.project-card h3{
   font-size: 3rem;
 }
-
-.hero-section p {
-  font-size: 1.2rem;
-  margin-top: 20px;
+.project-card p{
+  font-size: 1.6rem;
 }
-
-.hero-section {
-  background: none;
-  padding: 120px 20px;
-  text-align: center;
-}
-
 /* Navegação */
 nav ul {
   list-style: none;
@@ -219,52 +352,9 @@ nav ul li a:hover {
 }
 
 /* Seções de conteúdo */
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-#sobre, #projetos {
-  margin-top: 20px;
-  border-radius: 12px;
-  padding: 40px;
-}
 
 #contato {
   margin-bottom: 40px;
-}
-
-/* Projetos (cards) */
-.projeto {
-  background: rgba(255, 255, 255, 0.1);
-backdrop-filter: blur(10px);
-border-radius: 12px;
-padding: 20px;
-margin: 20px auto;
-max-width: 400px;
-text-align: center;
-transition: transform 0.3s ease, background 0.3s ease;
-box-shadow: 0 4px 10px var(--verde-intermediario);
-}
-
-.projeto:hover {
-  transform: scale(1.05);
-  background: rgba(255, 255, 255, 0.2);
-}
-/*Botões*/
-.projeto a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 12px;
-  background: var(--verde-escuro);
-  color: var(--branco);
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-/*Hover Botões*/
-.projeto a:hover {
-  background: var(--verde-intermediario); 
 }
 
 /* Rodapé */
