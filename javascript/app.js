@@ -9,8 +9,3 @@ document.querySelectorAll('nav a').forEach(anchor => {
       });
     });
   });
-  document.getElementById('enter-site').addEventListener('click', function() {
-    const splashScreen = document.getElementById('splash-screen');
-    splashScreen.classList.add('hidden');
-  });
-  

@@ -3,52 +3,184 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins";
 }
 
 /* Cores principais */
 :root {
-  --cor-fundo: #A8C3A0;
-  --cor-fundo1: #F0F0F0; 
-  --verde-escuro: #2C5234;
-  --verde-intermediario: #52796F; 
-  --marrom-escuro: #2c5234a6; 
-  --marrom-claro: #8D6E63; 
-  --branco: #F0F0F0; 
+  --bg-color: #080808;
+  --second-bg-color: #101010;
+  --text-color: white;
+  --main-color: #4b095e;
 }
 
-/* Corpo e Background */
-body {
-  background: linear-gradient(70deg, var(--cor-fundo1), var(--cor-fundo));
-  background-color: var(--cor-fundo);
-  color: var(--verde-intermediario);
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  padding-top: 80px;
+html {
+  font-size: 70%;
+  overflow-x: hidden;
 }
 
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+}
 
+/* HEADER */
 header {
   position: fixed;
   top: 10px;
-  left: 20%;
-  right: 20%;
-  background-color: var(--marrom-escuro);
-  backdrop-filter: blur(7px);
-  padding: 20px 0;
-  border-radius: 20px;
+  left: 0;
+  right: 0;
+  max-width: 1200px;
+  background: rgba(65, 46, 77, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 2rem; 
+  border-radius: 15px;
   z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombras leves para dar profundidade */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 
-h1, h2, h3 {
-  font-weight: bold;
-  color: var(--verde-escuro); /* Cor dos títulos */
+
+#menu-icon {
+  font-size: 1.5rem;
+  color:var(--main-color);
+  display: none;
 }
 
-p {
-  color: var(--verde-intermediario); /* Cor dos parágrafos */
+.logo{
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.logo:hover {
+  transform: scale(1.02);
 }
 
+span{
+  background: linear-gradient(
+    270deg,
+    rgba(100, 0, 150, 1) 10%,
+    rgb(193, 11, 165) 100%
+    );
+    background-clip: text;
+    color: transparent;
+}
+
+.navbar a{
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+
+.gradient-btn{
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  background: linear-gradient(
+    270deg,
+    rgba(100, 0, 150, 1) 10%,
+    rgb(193, 11, 165) 100%
+    );
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    color: white;
+    border: none;
+    text-wrap: nowrap;
+}
+
+.gradient-btn:hover{
+  transform: scale(1.05);
+}
+
+/*FIM HEADER*/
+
+/* SECTION */
+
+section {
+  margin-top: 10vh;
+  min-height: 100vh;
+  padding: 10rem 15%;
+}
+.home{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 15rem;
+}
+
+.home-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.home-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: 8rem;
+  line-height: 1;
+}
+
+.home-content h3 {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+.home-img img{
+  width: 22vw;
+  border-radius: 50% 0;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.4s ease-in-out;
+}
+
+.home-img img:hover{
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color),
+              0 0 100px var(--main-color);
+  transform: scale(1.05);
+}
+
+.social-icons a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  padding: 1rem;
+  background: transparent;
+  border: 2px  solid var(--main-color);
+  border-radius: 50%;
+  color: var(--main-color);
+  margin: 2rem 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+.social-icons a:hover{
+  color: var(--text-color);
+  background-color: var(--main-color);
+  transform: scale(1.2)translateY(-5px);
+  box-shadow: 0 0 25px var(--main-color);
+}
 .hero-section h1 {
   font-size: 3rem;
 }
