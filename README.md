@@ -2,7 +2,7 @@
 Meu Portfólio de 2025! 
 
 # Está em construção 🔨😄 
-## Previsão de finalização: 06/04/2025
+## Previsão de finalização: --/12/2025
 
 - ✨ Você pode acompanhar meu progresso! : https://maripinas.github.io/PORTFOLIO2025/
 
